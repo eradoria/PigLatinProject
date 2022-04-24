@@ -11,39 +11,39 @@ const rl = readline.createInterface({
 });
 
 
-const pigLatin = (word) => {
-
-  word = word.trim(' ')
-  word = word.toLowerCase()
-  let vowels = ['a', 'e','i', 'o','u']
+// const pigLatin = (word) => {
+//   let word 
+//   word = word.trim(' ')
+//   word = word.toLowerCase()
+//   let vowels = ['a', 'e','i', 'o','u']
   
-  if (vowels.includes(word[0])){
-      return word +'yay'; 
-    }
+//   if (vowels.includes(word[0])){
+//       return word +'yay'; 
+//     }
 
-    let constPre = ""
-    for (let i = 0; i < word.length; i++)
-    {
-      const char = word[i];
-      if (vowels.includes(char)) {
-      break;
-    }
-    constPre += char;
-  }
-  return word.substring(constPre.length) + constPre + "ay"
-}
+//     let constPre = ""
+//     for (let i = 0; i < word.length; i++)
+//     {
+//       const char = word[i];
+//       if (vowels.includes(char)) {
+//       break;
+//     }
+//     constPre += char;
+//   }
+//   return word.substring(constPre.length) + constPre + "ay"
+// }
 
 
 
-// the first function called in the program to get an input from the user
-// to run the function use the command: node main.js
-// to close it ctrl + C
-const getPrompt = () => {
-  rl.question('word ', (answer) => {
-    console.log( pigLatin(answer) );
-    getPrompt();
-  });
-}
+// // the first function called in the program to get an input from the user
+// // to run the function use the command: node main.js
+// // to close it ctrl + C
+// const getPrompt = () => {
+//   rl.question('word ', (answer) => {
+//     console.log( pigLatin(answer) );
+//     getPrompt();
+//   });
+// }
 
 // Unit Tests
 // to use them run the command: npm test main.js
